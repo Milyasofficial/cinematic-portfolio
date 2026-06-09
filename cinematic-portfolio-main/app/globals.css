@@ -1,76 +1,90 @@
 @import "tailwindcss";
 
-/* ─── Cinematic Dark Theme with Warm Gold Accents ─────────────────────────────── */
+/* Unique Pakistani Developer Portfolio Theme */
 :root {
-  /* Primary Colors - Deep Black & Navy */
-  --primary-dark: #0a0a0a;
-  --primary-navy: #1a1a1a;
-  --primary-slate: #2d2d2d;
-  
-  /* Accent - Warm Amber/Gold */
-  --accent: #d4af37;
-  --accent-light: #e8c547;
-  --accent-hover: #c9a227;
-  
-  /* Surfaces */
-  --surface-bg: #0a0a0a;
-  --surface-card: #1a1a1a;
-  --surface-elevated: #2d2d2d;
-  
-  /* Text */
-  --text-primary: #f5f5f5;
-  --text-secondary: #d4d4d4;
-  --text-muted: #a0a0a0;
-  --text-on-dark: #f5f5f5;
-  
-  /* Status */
-  --status-available: #10b981;
-  --status-warning: #f59e0b;
-  --status-error: #ef4444;
-  
-  /* Type scale */
-  --hero-name-size: clamp(3.5rem, 12vw, 9rem);
-  --text-body: clamp(0.95rem, 1.2vw, 1.1rem);
-  --text-small: 0.875rem;
-  --hero-role-size: clamp(0.875rem, 1.2vw, 1rem);
-  
-  /* ─── shadcn var bridge (maps to brand tokens) ── */
-  --background: var(--surface-bg);
-  --foreground: var(--text-primary);
-  --primary: var(--accent);
-  --primary-foreground: var(--surface-bg);
-  --ring: var(--accent);
-  --radius: 12px;
+  --bg-primary: #000000;
+  --bg-secondary: #0f172a;
+  --bg-tertiary: #1e293b;
+  --accent: #d97706;
+  --accent-light: #f59e0b;
+  --accent-dark: #b45309;
+  --text-primary: #ffffff;
+  --text-secondary: #e5e7eb;
+  --text-muted: #9ca3af;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* ─── Base ──────────────────────────────────────────────── */
 html {
-  background: var(--surface-bg);
-}
-
-html, body {
-  height: 100%;
-  overflow: hidden;
+  scroll-behavior: smooth;
+  background: var(--bg-primary);
 }
 
 body {
-  background: var(--surface-bg);
+  background-color: var(--bg-primary);
   color: var(--text-primary);
-  font-family: var(--font-geist-sans), Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* ─── Scrollbar Styling ─────────────────────────────────── */
-main::-webkit-scrollbar { display: none; }
-main { scrollbar-width: none; -ms-overflow-style: none; }
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
 
-/* ─── Smooth Animations ─────────────────────────────────── */
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-light);
+}
+
+/* Unique animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(217, 119, 6, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(217, 119, 6, 0.6);
+  }
+}
+
+@keyframes typewriter {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -104,21 +118,46 @@ main { scrollbar-width: none; -ms-overflow-style: none; }
   }
 }
 
-@keyframes glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(212, 175, 55, 0.3); }
-  50% { box-shadow: 0 0 30px rgba(212, 175, 55, 0.5); }
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-@keyframes shimmer {
-  0% { background-position: -1000px 0; }
-  100% { background-position: 1000px 0; }
+/* Terminal effect */
+.terminal-text {
+  font-family: 'Monaco', 'Courier New', monospace;
+  color: #10b981;
+  text-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
 }
 
-@media (max-width: 767px) {
-  :root {
-    --hero-name-size: clamp(2.5rem, 10vw, 4.5rem);
+/* Glass morphism effect */
+.glass {
+  background: rgba(15, 23, 42, 0.4);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive utilities */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
   }
 
-  html, body { height: 100svh !important; }
-  main { height: 100svh !important; }
+  body {
+    overflow-x: hidden;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
