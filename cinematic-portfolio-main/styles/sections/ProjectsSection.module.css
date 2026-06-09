@@ -4,7 +4,7 @@
   top: 0;
   height: 100vh;
   z-index: 4;
-  background: #0d0d0d;
+  background: var(--primary-dark);
   overflow: hidden;
 }
 
@@ -23,11 +23,11 @@
 }
 
 .sectionLabel {
-  font-size: 0.58rem;
-  font-weight: 700;
+  font-size: 0.65rem;
+  font-weight: 800;
   letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--accent-light);
 }
 
 .counter {
@@ -36,9 +36,9 @@
   letter-spacing: 0.06em;
 }
 
-.cCur { color: #fff; font-weight: 700; }
-.cSep { color: rgba(255, 255, 255, 0.22); }
-.cTot { color: rgba(255, 255, 255, 0.28); }
+.cCur { color: var(--text-primary); font-weight: 700; }
+.cSep { color: rgba(148, 163, 184, 0.3); }
+.cTot { color: rgba(148, 163, 184, 0.4); }
 
 /* ── Horizontal track ────────────────────────── */
 .track {
@@ -75,9 +75,9 @@
   inset: 0;
   background: linear-gradient(
     108deg,
-    rgba(4, 4, 4, 0.96) 0%,
-    rgba(4, 4, 4, 0.65) 42%,
-    rgba(4, 4, 4, 0.28) 100%
+    rgba(15, 23, 42, 0.95) 0%,
+    rgba(15, 23, 42, 0.7) 42%,
+    rgba(15, 23, 42, 0.3) 100%
   );
   z-index: 1;
 }
@@ -87,8 +87,8 @@
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(4, 4, 4, 0.97) 0%,
-    rgba(4, 4, 4, 0.45) 40%,
+    rgba(15, 23, 42, 0.98) 0%,
+    rgba(15, 23, 42, 0.5) 40%,
     transparent 65%
   );
   z-index: 2;
