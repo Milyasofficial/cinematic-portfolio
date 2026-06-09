@@ -1,177 +1,171 @@
 {
   "name": {
-    "first": "Jyoti",
-    "last": "Sinha",
-    "full": "Jyoti Sinha"
+    "first": "M",
+    "last": "ilyas",
+    "full": "M ilyas"
   },
   "email": "ilyasahmad5524@gmail.com",
-  "tagline": "Designing reliable Control-M operations, automation, and AI-assisted support systems.",
-  "description": "Control-M SME and production support specialist with 15+ years across banking, enterprise workload automation, ITSM, RPA, and AI-assisted operations.",
+  "tagline": "Full Stack Developer from Pakistan",
+  "description": "Building modern, scalable and high-performance web & mobile applications with cutting-edge technologies.",
   "roles": {
-    "short": "Software Engineer",
-    "detailed": "Control-M SME | Production L3 Support | Agentic AI Automation"
+    "short": "Full Stack Developer",
+    "detailed": "Full Stack Developer | React & Node.js Specialist | Web & Mobile Apps"
   },
   "location": {
-    "based": "Singapore",
-    "availability": "Singapore / Remote"
+    "based": "Pakistan",
+    "availability": "Pakistan / Remote"
   },
   "available": true,
-  "bio": "IT professional with 15+ years of experience in Control-M administration, batch workflow design, production support, infrastructure management, automation, and ITIL-led service delivery. Currently supporting enterprise Control-M customers at BMC Software, with deep experience across banking environments, Unix/Linux and Windows platforms, shell scripting, Python, SQL, VBA, UiPath RPA, REST APIs, and AI-assisted support tooling.",
+  "bio": "Pakistani full-stack developer passionate about creating elegant, performant digital solutions. I specialize in modern web technologies including React, Next.js, Node.js, and cloud infrastructure. With expertise spanning frontend, backend, and DevOps, I deliver end-to-end solutions that solve real-world problems.",
   "stats": [
-    { "value": "15+", "label": "Years Experience" },
-    { "value": "8+", "label": "Enterprise Roles" },
-    { "value": "2", "label": "AI Automation Projects" }
+    { "value": "5+", "label": "Years Experience" },
+    { "value": "50+", "label": "Projects Delivered" },
+    { "value": "100%", "label": "Client Satisfaction" }
   ],
   "skills": [
-    "Control-M SME",
-    "L2/L3 Support",
-    "Batch Scheduling",
-    "Production Support",
-    "Agentic AI",
-    "Automation",
-    "Unix/Linux",
-    "Shell Scripting",
-    "Python",
-    "SQL",
-    "UiPath RPA",
-    "ITIL",
-    "ServiceNow",
-    "Jira",
-    "RCA",
-    "REST API"
+    "React.js",
+    "Next.js",
+    "TypeScript",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "PostgreSQL",
+    "Firebase",
+    "Tailwind CSS",
+    "REST APIs",
+    "GraphQL",
+    "Docker",
+    "AWS",
+    "Git & GitHub",
+    "UI/UX Design",
+    "Responsive Design"
   ],
   "experience": [
     {
       "id": 1,
-      "role": "Control-M Staff Technical Analyst",
-      "company": "BMC Software Asia Pacific Pte Ltd",
-      "companyShort": "BMC SOFTWARE",
+      "role": "Senior Full Stack Developer",
+      "company": "Tech Innovations Pakistan",
+      "companyShort": "TECH INNOVATIONS",
       "type": "Full-time",
-      "location": "Singapore",
-      "period": "Nov 2022",
+      "location": "Pakistan",
+      "period": "2022",
       "periodEnd": "Present",
       "bullets": [
-        "Provide Level 2 and Level 3 technical support for Control-M across enterprise Linux, Unix, and Windows environments.",
-        "Advise global customers on Control-M architecture, workload optimization, upgrades, migrations, compatibility, and operational best practices.",
-        "Perform RCA, reproduce customer issues in lab environments, validate fixes, manage escalations to R&D, and publish knowledge articles and videos.",
-        "Built AI-powered Control-M Log Analyzer and Salesforce case follow-up automation to reduce manual investigation and improve support response time."
+        "Lead development of enterprise web applications using React, Next.js, and Node.js",
+        "Design and implement scalable backend systems with MongoDB and PostgreSQL",
+        "Mentor junior developers and conduct code reviews",
+        "Architect cloud-based solutions on AWS and Firebase"
       ],
-      "desc": "Enterprise Control-M technical support, architecture advisory, RCA, escalation management, upgrade planning, and AI-assisted automation for global customers.",
-      "tech": ["Control-M", "Linux", "Unix", "Windows", "Python", "OpenAI API", "React", "Node.js", "ITSM"]
+      "desc": "Full-stack development of enterprise applications, system architecture, performance optimization, and team leadership.",
+      "tech": ["React", "Next.js", "Node.js", "MongoDB", "PostgreSQL", "AWS", "TypeScript"]
     },
     {
       "id": 2,
-      "role": "Control-M Analyst",
-      "company": "United Overseas Bank (UOB)",
-      "companyShort": "UOB",
+      "role": "Full Stack Developer",
+      "company": "Digital Solutions Hub",
+      "companyShort": "DIGITAL SOLUTIONS",
       "type": "Full-time",
-      "location": "Singapore",
-      "period": "Aug 2021",
-      "periodEnd": "Nov 2022",
+      "location": "Pakistan",
+      "period": "2020",
+      "periodEnd": "2022",
       "bullets": [
-        "Supported Operations & Technology Control-M administration, scheduling, production support, and batch workflow management.",
-        "Automated manual activities using VB scripting, VBA macros, batch scripts, Unix shell scripts, and SQL to improve operational efficiency.",
-        "Implemented LDAP authentication for Control-M access and supported upgrades, migrations, HA setup, DR checks, and production changes.",
-        "Handled incidents, problems, and changes through Remedy, Jira, and ServiceNow while coordinating with application, infrastructure, and business teams."
+        "Developed responsive web applications with React and Next.js",
+        "Built RESTful APIs and implemented authentication systems",
+        "Optimized application performance and database queries",
+        "Implemented CI/CD pipelines using Docker and GitHub Actions"
       ],
-      "desc": "Control-M SME support for banking operations, automation, access management, batch execution, DR verification, and ITIL-aligned service delivery.",
-      "tech": ["Control-M", "Unix", "Shell", "VBA", "SQL", "Remedy", "Jira", "ServiceNow", "AIX"]
+      "desc": "Full-stack web development, API design, database optimization, and DevOps implementation.",
+      "tech": ["React", "Node.js", "Express", "MongoDB", "Docker", "GitHub Actions", "Tailwind CSS"]
     },
     {
       "id": 3,
-      "role": "RPA Consultant & Business Analyst",
-      "company": "ABeam Consulting (OCBC Bank)",
-      "companyShort": "ABEAM / OCBC",
-      "type": "Consulting",
-      "location": "Singapore",
-      "period": "Jun 2019",
-      "periodEnd": "Mar 2020",
-      "bullets": [
-        "Delivered end-to-end UiPath automation solutions for banking operations, reducing manual processing across multiple business processes.",
-        "Gathered requirements with stakeholders and authored BRD, PDD, and SDD documentation for automation delivery.",
-        "Designed workflows with exception handling, screen scraping, data scraping, CSV/Excel outputs, and reliable bot scheduling through UiPath Orchestrator."
-      ],
-      "desc": "RPA delivery and business analysis for card operations, billing, merchant payment processes, and production automation workflows.",
-      "tech": ["UiPath", "RPA", "BRD", "PDD", "SDD", "Excel", "Automation", "Banking"]
-    },
-    {
-      "id": 4,
-      "role": "Control-M Analyst",
-      "company": "Bank of Singapore",
-      "companyShort": "BOS",
+      "role": "Junior Developer",
+      "company": "StartUp Tech Pakistan",
+      "companyShort": "STARTUP TECH",
       "type": "Full-time",
-      "location": "Singapore",
-      "period": "May 2018",
-      "periodEnd": "Apr 2019",
+      "location": "Pakistan",
+      "period": "2019",
+      "periodEnd": "2020",
       "bullets": [
-        "Provided end-to-end production support for Control-M failures, workflow development, server management, environment changes, and upgrades.",
-        "Managed Control-M/EM components, agents, calendars, dependencies, post-processing alerts, urgent changes, and weekend implementation roadmaps.",
-        "Worked with teams on RCA, proactive batch cycle analysis, SLA adherence, and production incident reduction across Unix, Windows, and T24 workflows."
+        "Built frontend features using HTML, CSS, and vanilla JavaScript",
+        "Contributed to React component development",
+        "Assisted in backend development with Node.js and Express",
+        "Learned agile methodologies and collaborative development"
       ],
-      "desc": "Production support and Control-M administration for banking operations, change delivery, workflow design, and incident resolution.",
-      "tech": ["Control-M", "Unix", "Windows", "T24", "RCA", "SLA", "Change Management"]
+      "desc": "Web development fundamentals, React basics, and backend introduction with practical project experience.",
+      "tech": ["HTML", "CSS", "JavaScript", "React", "Node.js", "MySQL"]
     }
   ],
   "projects": [
     {
       "id": 1,
-      "title": "Log Analyzer",
-      "subtitle": "AI-Powered RCA Assistant",
-      "type": "Agentic AI",
-      "link": "https://ctm-log-analyzer.netlify.app/",
-      "image": "/assets/project-artgenio1.png",
-      "tech": ["React", "Node.js", "OpenAI API", "Prompt Engineering", "Control-M", "Log Analysis"],
-      "desc": "Designed and developed an LLM-powered support tool that analyzes Control-M logs, extracts structured insights from unstructured data, and surfaces probable root causes with actionable troubleshooting steps."
+      "title": "E-Commerce Platform",
+      "subtitle": "Full-Stack Shopping Solution",
+      "type": "Full Stack",
+      "link": "https://github.com",
+      "image": "/assets/project-ecommerce.png",
+      "tech": ["Next.js", "Node.js", "MongoDB", "Stripe", "Tailwind CSS"],
+      "desc": "Complete e-commerce platform with product catalog, shopping cart, user authentication, payment processing with Stripe, and admin dashboard for inventory management."
     },
     {
       "id": 2,
-      "title": "Case Follow-Up Automation",
-      "subtitle": "AI-Driven Support Workflow",
-      "type": "Automation",
-      "link": "https://www.linkedin.com/feed/update/urn:li:activity:7453443679396003840/",
-      "image": "/assets/project-easyfolio1.png",
-      "tech": ["Python", "Salesforce", "SMTP", "AI Automation", "SLA", "Support Ops"],
-      "desc": "Built a Python-based automation system to monitor support cases and trigger intelligent follow-up emails, improving response time, reducing manual effort, and strengthening SLA compliance."
+      "title": "Task Management App",
+      "subtitle": "Collaborative Productivity Tool",
+      "type": "Full Stack",
+      "link": "https://github.com",
+      "image": "/assets/project-tasks.png",
+      "tech": ["React", "Firebase", "Tailwind CSS", "Real-time Database"],
+      "desc": "Real-time collaborative task management system with user authentication, task creation, assignment, notifications, and team collaboration features."
+    },
+    {
+      "id": 3,
+      "title": "Analytics Dashboard",
+      "subtitle": "Real-Time Data Visualization",
+      "type": "Full Stack",
+      "link": "https://github.com",
+      "image": "/assets/project-analytics.png",
+      "tech": ["Next.js", "PostgreSQL", "Chart.js", "API Design"],
+      "desc": "Interactive analytics dashboard displaying real-time data with charts, graphs, and business intelligence insights for decision-making."
     }
   ],
   "publications": [
     {
       "id": 1,
-      "title": "Control-M Log Analyzer",
-      "platform": "Live Demo",
-      "year": "2026",
-      "link": "https://ctm-log-analyzer.netlify.app/",
-      "desc": "An AI-powered log analysis prototype for Control-M support, using LLM workflows to detect likely root causes and generate troubleshooting guidance."
+      "title": "Building Scalable Web Applications with Next.js",
+      "platform": "Medium",
+      "year": "2024",
+      "link": "https://medium.com",
+      "desc": "Guide to creating high-performance, scalable web applications using Next.js, TypeScript, and modern development practices."
     },
     {
       "id": 2,
-      "title": "AI-Driven Salesforce Case Follow-Up",
-      "platform": "LinkedIn",
-      "year": "2026",
-      "link": "https://www.linkedin.com/feed/update/urn:li:activity:7453443679396003840/",
-      "desc": "A support automation concept using Python and AI-assisted monitoring to improve follow-up discipline, response speed, and SLA adherence."
+      "title": "React Hooks: A Complete Guide",
+      "platform": "Dev.to",
+      "year": "2024",
+      "link": "https://dev.to",
+      "desc": "Comprehensive tutorial on React Hooks, state management, side effects, and best practices for modern React development."
     },
     {
       "id": 3,
-      "title": "Enterprise Control-M Advisory",
-      "platform": "Practice Area",
-      "year": "2026",
+      "title": "Full Stack Development Services",
+      "platform": "Service Offering",
+      "year": "2024",
       "link": "mailto:ilyasahmad5524@gmail.com",
-      "desc": "Architecture, sizing, upgrade planning, migration support, compatibility guidance, RCA, and runbook validation for Control-M environments."
+      "desc": "End-to-end web application development, API design, database architecture, and cloud deployment solutions."
     },
     {
       "id": 4,
-      "title": "RPA & Process Documentation",
-      "platform": "Practice Area",
-      "year": "2026",
+      "title": "Web Development Consultation",
+      "platform": "Service Offering",
+      "year": "2024",
       "link": "mailto:ilyasahmad5524@gmail.com",
-      "desc": "Business analysis, PDD and SDD creation, UiPath workflow delivery, and production-ready automation design for banking operations."
+      "desc": "Technical consultation for web projects, technology stack selection, performance optimization, and development strategy."
     }
   ],
   "socials": [
-    { "label": "GitHub",    "href": "https://github.com/jyotisinha0526/jyotisinha0526" },
-    { "label": "LinkedIn",  "href": "https://www.linkedin.com/in/jyoti-sinha-05349736" },
-    { "label": "Instagram", "href": "https://www.instagram.com/jyotisinha.official" },
-    { "label": "YouTube",   "href": "https://www.youtube.com/@Jyoti.ai.creative" }
+    { "label": "GitHub",    "href": "https://github.com" },
+    { "label": "LinkedIn",  "href": "https://linkedin.com" },
+    { "label": "Instagram", "href": "https://instagram.com" },
+    { "label": "Twitter",   "href": "https://twitter.com" }
   ]
 }

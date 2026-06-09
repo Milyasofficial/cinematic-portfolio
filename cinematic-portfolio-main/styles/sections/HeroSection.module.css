@@ -6,9 +6,9 @@
   z-index: 2;
   background: linear-gradient(
     135deg,
-    var(--surface-bg) 0%,
-    var(--surface-card) 50%,
-    var(--primary-dark) 100%
+    #0a0a0a 0%,
+    #1a1a1a 50%,
+    #0f0f0f 100%
   );
   overflow: hidden;
   display: flex;
@@ -60,7 +60,7 @@
 
 .socialLink:hover {
   opacity: 1;
-  color: var(--accent-light);
+  color: #d4af37;
 }
 
 .socialLabel {
@@ -132,11 +132,11 @@
 
 .roleText {
   font-family: var(--font-geist-sans), sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--accent-light);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #d4af37;
   line-height: 1.4;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
@@ -168,14 +168,14 @@
 
 .pill {
   font-family: var(--font-geist-sans), sans-serif;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 600;
-  color: var(--text-secondary);
-  background: rgba(59, 130, 246, 0.1);
-  border: 1px solid rgba(59, 130, 246, 0.3);
+  color: #d4d4d4;
+  background: rgba(212, 175, 55, 0.08);
+  border: 1px solid rgba(212, 175, 55, 0.25);
   border-radius: 9999px;
   padding: 0.5rem 1rem;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.05em;
   white-space: nowrap;
   flex: 1;
   text-align: center;
@@ -186,7 +186,7 @@
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: var(--accent);
+  background: #d4af37;
   flex-shrink: 0;
 }
 
@@ -195,26 +195,26 @@
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
-  background: var(--accent);
-  color: #ffffff;
+  background: #d4af37;
+  color: #0a0a0a;
   font-family: var(--font-geist-sans), sans-serif;
   font-size: 0.875rem;
   font-weight: 700;
   padding: 0.75rem 2rem;
-  border-radius: 8px;
+  border-radius: 6px;
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
   align-self: flex-start;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.25);
 }
 
 .viewBtn:hover {
-  background: var(--accent-light);
-  box-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
-  transform: translateY(-2px);
+  background: #e8c547;
+  box-shadow: 0 12px 32px rgba(212, 175, 55, 0.4);
+  transform: translateY(-3px);
 }
 
 .viewBtn:focus-visible {
@@ -231,9 +231,9 @@
 }
 
 .statCard {
-  background: rgba(59, 130, 246, 0.08);
-  border: 1px solid rgba(59, 130, 246, 0.2);
-  border-radius: 8px;
+  background: rgba(212, 175, 55, 0.08);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 6px;
   padding: 0.75rem 1.25rem;
   display: flex;
   flex-direction: column;
@@ -246,7 +246,7 @@
   font-family: var(--font-geist-sans), sans-serif;
   font-size: 1.25rem;
   font-weight: 900;
-  color: var(--accent-light);
+  color: #d4af37;
   line-height: 1.2;
 }
 
@@ -273,11 +273,11 @@
 
 .taglineCard,
 .availCard {
-  background: rgba(30, 41, 59, 0.8);
+  background: rgba(26, 26, 26, 0.8);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(59, 130, 246, 0.2);
-  border-radius: 12px;
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  border-radius: 8px;
   padding: 1.25rem 1.5rem;
 }
 
@@ -291,7 +291,7 @@
 }
 
 .taglineAccent {
-  color: var(--accent-light);
+  color: #d4af37;
   font-weight: 800;
 }
 
