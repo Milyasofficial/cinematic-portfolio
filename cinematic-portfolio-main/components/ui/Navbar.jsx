@@ -1,166 +1,51 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
-import {
-  NavigationMenu,
-  NavigationMenuList,
-  NavigationMenuItem,
-  NavigationMenuLink,
-} from '@/components/ui/navigation-menu'
-import { gsap } from '@/lib/gsap'
-import profile from '@/data/profile.json'
-import styles from '@/styles/ui/Navbar.module.css'
-import { FaBars, FaTimes } from 'react-icons/fa'
-
-// idx matches snap position in page.js (0=video,1=hero,2=about,3-4=projects,5=work-exp,6=publications,7=footer)
-const NAV_ITEMS = [
-  { label: 'Home',         idx: 0 },
-  { label: 'About',        idx: 2 },
-  { label: 'Work',         idx: 3 },
-  { label: 'Experience',   idx: 5 },
-  { label: 'Impact',       idx: 6 },
-  { label: 'Contact',      idx: 7 },
-]
-
-function getIST() {
-  return new Date().toLocaleTimeString('en-IN', {
-    timeZone: 'Asia/Singapore',
-    hour: '2-digit',
-    minute: '2-digit',
-    second: '2-digit',
-    hour12: true,
-  }).toUpperCase()
-}
+import { useState } from 'react'
+import Link from 'next/link'
 
 export default function Navbar() {
-  const [time,    setTime]    = useState('')   // '' on SSR - avoids hydration mismatch
-  const [onIntro, setOnIntro] = useState(true)
-  const [onDark,  setOnDark]  = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
-  const headerRef   = useRef(null)
-  const lastY       = useRef(0)
-  const hidden      = useRef(false)
-  const stopTimer   = useRef(null)
-
-  // Live clock - set immediately on mount, then every second
-  useEffect(() => {
-    setTime(getIST())
-    const id = setInterval(() => setTime(getIST()), 1000)
-    return () => clearInterval(id)
-  }, [])
-
-  // Auto-hide on scroll-down, reveal on scroll-up or scroll-stop
-  useEffect(() => {
-    const scroller = document.querySelector('main') ?? window
-    const vh = window.innerHeight
-
-    function showNavbar() {
-      if (!hidden.current) return
-      gsap.to(headerRef.current, { y: '0%', duration: 0.35, ease: 'power2.out' })
-      hidden.current = false
-    }
-
-    const onScroll = () => {
-      const currentY = scroller.scrollTop ?? window.scrollY
-      const delta    = currentY - lastY.current
-
-      const sectionIdx = Math.round(currentY / vh)
-      setOnIntro(currentY < vh * 0.8)
-      setOnDark(sectionIdx >= 3)
-
-      if (delta > 8 && !hidden.current) {
-        gsap.to(headerRef.current, { y: '-100%', duration: 0.35, ease: 'power2.inOut' })
-        hidden.current = true
-      } else if (delta < -6) {
-        showNavbar()
-      }
-
-      lastY.current = currentY
-
-      // Show navbar 400 ms after scrolling stops
-      clearTimeout(stopTimer.current)
-      stopTimer.current = setTimeout(showNavbar, 400)
-    }
-
-    scroller.addEventListener('scroll', onScroll, { passive: true })
-    return () => {
-      scroller.removeEventListener('scroll', onScroll)
-      clearTimeout(stopTimer.current)
-    }
-  }, [])
 
   return (
-    <>
-      <header ref={headerRef} className={`${styles.header} ${onIntro ? styles.introMode : ''} ${onDark ? styles.darkMode : ''}`}>
-        <span className={styles.time}>SINGAPORE TIME - {time}</span>
+    <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-orange-900/20">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <Link href="/" className="text-2xl font-bold text-white hover:text-orange-500 transition-colors">
+          M ilyas
+        </Link>
+        
+        {/* Desktop nav */}
+        <nav className="hidden md:flex items-center gap-8">
+          <a href="#skills" className="text-gray-300 hover:text-orange-500 transition-colors text-sm font-medium">Skills</a>
+          <a href="#services" className="text-gray-300 hover:text-orange-500 transition-colors text-sm font-medium">Services</a>
+          <a href="#projects" className="text-gray-300 hover:text-orange-500 transition-colors text-sm font-medium">Projects</a>
+          <a href="#experience" className="text-gray-300 hover:text-orange-500 transition-colors text-sm font-medium">Experience</a>
+        </nav>
 
-        <NavigationMenu className={styles.navMenu}>
-          <NavigationMenuList className="flex gap-6">
-            {NAV_ITEMS.map(({ label, idx }) => (
-              <NavigationMenuItem key={label}>
-                <NavigationMenuLink
-                  className={styles.navLink}
-                  onClick={() => {
-                    const scroller = document.querySelector('main')
-                    if (scroller) gsap.to(scroller, {
-                      scrollTop: idx * window.innerHeight,
-                      duration: 1.0,
-                      ease: 'power3.inOut',
-                    })
-                  }}
-                  style={{ cursor: 'pointer' }}
-                >
-                  {label}
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-            ))}
-          </NavigationMenuList>
-        </NavigationMenu>
-
-        <a
-          href={`mailto:${profile.email}`}
-          className={`${styles.emailBtn} rounded-full text-xs font-semibold px-5 h-8`}
-        >
-          Email me
+        {/* Contact button */}
+        <a href="mailto:ilyasahmad5524@gmail.com" className="px-6 py-2 bg-orange-600 hover:bg-orange-700 text-white font-bold rounded-lg transition-colors text-sm">
+          Contact
         </a>
 
-        <button
-          className={styles.hamburger}
-          onClick={() => setMenuOpen(o => !o)}
+        {/* Mobile menu toggle */}
+        <button 
+          onClick={() => setMenuOpen(!menuOpen)} 
+          className="md:hidden text-orange-500 text-2xl"
           aria-label="Toggle menu"
         >
-          {menuOpen ? <FaTimes size={18} /> : <FaBars size={18} />}
+          {menuOpen ? '✕' : '☰'}
         </button>
-      </header>
+      </div>
 
+      {/* Mobile menu */}
       {menuOpen && (
-        <div className={styles.mobileMenu}>
-          {NAV_ITEMS.map(({ label, idx }) => (
-            <button
-              key={label}
-              className={styles.mobileNavLink}
-              onClick={() => {
-                const scroller = document.querySelector('main')
-                if (scroller) gsap.to(scroller, {
-                  scrollTop: idx * window.innerHeight,
-                  duration: 1.0,
-                  ease: 'power3.inOut',
-                })
-                setMenuOpen(false)
-              }}
-            >
-              {label}
-            </button>
-          ))}
-          <a
-            href={`mailto:${profile.email}`}
-            className={styles.mobileMailLink}
-            onClick={() => setMenuOpen(false)}
-          >
-            {profile.email}
-          </a>
+        <div className="md:hidden bg-black border-t border-orange-900/20 py-4 px-6 flex flex-col gap-4">
+          <a href="#skills" className="text-gray-300 hover:text-orange-500 transition-colors" onClick={() => setMenuOpen(false)}>Skills</a>
+          <a href="#services" className="text-gray-300 hover:text-orange-500 transition-colors" onClick={() => setMenuOpen(false)}>Services</a>
+          <a href="#projects" className="text-gray-300 hover:text-orange-500 transition-colors" onClick={() => setMenuOpen(false)}>Projects</a>
+          <a href="#experience" className="text-gray-300 hover:text-orange-500 transition-colors" onClick={() => setMenuOpen(false)}>Experience</a>
+          <a href="mailto:ilyasahmad5524@gmail.com" className="text-orange-500 font-bold">Contact</a>
         </div>
       )}
-    </>
+    </header>
   )
 }

@@ -27,26 +27,26 @@ const dancing = Dancing_Script({
 });
 
 const description =
-  'Control-M SME and production support specialist with 15+ years across enterprise workload automation, ITSM, RPA, and AI-assisted operations.';
+  'M ilyas | Pakistani Full Stack Developer | Web Development, Mobile Apps, Cloud Solutions';
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Jyoti Sinha | Software Engineer',
-    template: '%s | Jyoti Sinha',
+    default: 'M ilyas | Full Stack Developer',
+    template: '%s | M ilyas',
   },
   description,
   keywords: [
-    'Jyoti Sinha',
-    'Control-M SME',
-    'Control-M Administrator',
-    'Production Support',
-    'Application L3 Support',
-    'Agentic AI Automation',
-    'Batch Scheduling',
-    'ITIL',
-    'UiPath RPA',
-    'Singapore',
+    'M ilyas',
+    'Full Stack Developer',
+    'Web Developer',
+    'React Developer',
+    'Node.js Developer',
+    'Next.js Developer',
+    'Pakistani Developer',
+    'Web Development',
+    'Mobile Apps',
+    'Pakistan',
   ],
   authors: [{ name: 'Jyoti Sinha', url: SITE_URL }],
   creator: 'Jyoti Sinha',
